@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node mars.js",
     "install": "node ./.bin/hookscopy",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 10000",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "main": "mars",
   "repository": {
@@ -71,10 +73,12 @@
     "wav": "1.0.1",
     "ws": "1.1.1",
     "xml2js": "~0.4.9",
-    "yandex-speech": "0.0.12"
+    "yandex-speech": "0.0.12",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "mocha": "^4.0.1",
     "sip_client": "git+https://github.com/komunikator/sip_client.git"
-  }
+  },
+  "snyk": true
 }
